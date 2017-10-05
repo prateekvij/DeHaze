@@ -5,6 +5,9 @@ hazy images and store them as pickle files for easy loading.
 
 Run the file as "python buildTransMap.py" from the pre-processing directory
 
+The image format is (480, 640, 3) and image count is 1449. The value of pixel
+is in range [0, 1] rather than integer values from 0 to 255. 
+
 Check the path to the images given in variable HAZY_img_dir 
 and ORIGINAL_img_dir. Change the output_path to change the path of the pickle 
 file to be stored
@@ -63,6 +66,8 @@ for k in intervals:
 		# print np.amax(t_image)
 		# img = Image.fromarray(t_image)
 		# img.save(str(i)+'original.png')
+
+	transmission_maps = np.asarray(transmission_maps, dtype=np.float32)
 
 	with open(output_path, "wb") as out_file:
 		pickle.dump(t, out_file, protocol=pickle.HIGHEST_PROTOCOL)
