@@ -2,6 +2,14 @@
 """
 The file contain code for creating transmission maps from actual and 
 hazy images and store them as pickle files for easy loading.
+D-Hazy dataset is used
+Dataset:
+www.meo.etc.upt.ro/AncutiProjectPages/D_Hazzy_ICIP2016/D-HAZY_DATASET.zip 
+
+Paper: 
+www.meo.etc.upt.ro/AncutiProjectPages/D_Hazzy_ICIP2016/D_HAZY_ICIP2016.pdf 
+
+
 
 Run the file as "python buildTransMap.py" from the pre-processing directory
 
@@ -70,4 +78,4 @@ for k in intervals:
 	transmission_maps = np.asarray(transmission_maps, dtype=np.float32)
 
 	with open(output_path, "wb") as out_file:
-		pickle.dump(t, out_file, protocol=pickle.HIGHEST_PROTOCOL)
+		pickle.dump(transmission_maps, out_file, protocol=pickle.HIGHEST_PROTOCOL)

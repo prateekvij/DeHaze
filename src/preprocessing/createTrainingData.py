@@ -2,9 +2,15 @@
 """
 The file contain code for creating training data and storing it as a pickle 
 file. The data consist of 1449 hazy images of size (480, 640, 3) 
-from the NYU dataset.
+from the D-Hazy dataset. Link to 
+Dataset:
+www.meo.etc.upt.ro/AncutiProjectPages/D_Hazzy_ICIP2016/D-HAZY_DATASET.zip 
 
-Run the file as "python createTrainingData.py" from the pre-processing directory
+Paper: 
+www.meo.etc.upt.ro/AncutiProjectPages/D_Hazzy_ICIP2016/D_HAZY_ICIP2016.pdf 
+
+Run the file as "python createTrainingData.py" from the pre-processing
+directory
 
 The image format is (480, 640, 3) and image count is 1449. The value of pixel
 is in range [0, 1] rather than integer values from 0 to 255. 
